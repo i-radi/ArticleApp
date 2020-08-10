@@ -1,0 +1,57 @@
+﻿@model ArticleApp.Models.Article
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container au-card recent-report">
+
+    <h2>Create</h2>
+
+    <h4>Article</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="File" class="control-label"></label>
+                    <input asp-for="File" type="file" class="form-control" />
+                    <span asp-validation-for="File" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Topic" class="control-label"></label>
+                    <textarea asp-for="Topic" class="form-control" ></textarea>
+                    <span asp-validation-for="Topic" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Caregory</label>
+                    <select asp-for="CaregoryId" class="form-control" asp-items="ViewBag.CaregoryId"></select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index"  class="btn btn-dark">Back to List</a>
+    </div>
+</div>
+
+
+@section UpHeader{
+<script>
+    console.log("How to use render section!");
+</script>
+ }

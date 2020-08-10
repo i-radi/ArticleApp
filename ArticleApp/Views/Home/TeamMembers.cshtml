@@ -1,0 +1,41 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<TeamMember>
+
+    <section id="doctors" class="doctors section-bg">
+        <div class="container aos-init aos-animate" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Team Members</h2>
+            </div>
+
+            <div class="row">
+
+                @foreach (var item in Model)
+                {
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member-img">
+                            <img src="~/Images/TeamMembers/@item.Image" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href=""><i class="icofont-twitter"></i></a>
+                                <a href=""><i class="icofont-facebook"></i></a>
+                                <a href=""><i class="icofont-instagram"></i></a>
+                                <a href=""><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>@item.Name</h4>
+                            <span>@item.JobTitle</span>
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </div>
+
+        </div>
+    </section>

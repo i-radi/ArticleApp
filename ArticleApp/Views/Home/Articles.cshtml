@@ -1,0 +1,30 @@
+﻿@model List<Article>
+<section id="about" class="about">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>مقالات @ViewBag.categ </h2>
+        </div>
+        <center>
+            @foreach (var item in Model)
+            {
+        <div class="row" style="margin:30px">
+            <div class="col-12">
+                <img src="~/Images/Articles/@item.Image" style="height:200px;width:200px;border-radius:50%" class="img-fluid" alt="">
+            </div>
+            <div class="col-12">
+                <h3>@item.Title</h3>
+                <h2>@item.Date</h2>
+                <p class="font-italic">
+                    @item.Topic
+                </p>
+            </div>
+        </div>
+        <center>
+            <a class="btn btn-danger" href="/Home/DeleteArticle/@item.Id">Delete</a>
+        </center>
+            <hr />
+            }
+            </center>
+    </div>
+</section>

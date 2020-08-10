@@ -1,0 +1,38 @@
+﻿@model ArticleApp.Models.TeamMember
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="container au-card recent-report">
+
+    <h2>Details</h2>
+
+    <div>
+        <h4>Team Member</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.JobTitle)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.JobTitle)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index" class="btn btn-dark">Back to List</a>
+    </div>
+</div>
