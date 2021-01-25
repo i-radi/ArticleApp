@@ -1,25 +1,26 @@
 ﻿@model List<Category>
 
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div>
+    <section id="featured-services" class="featured-services " style="align-content:center">
+        <div class="container aos-init aos-animate" data-aos="fade-up">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <a href="/Home/Articles/@item.Id">
+                            <div class="icon-box " style="width: 100%" data-aos="fade-up" data-aos-delay="400">
+                                <div class="icon "><i class="icofont-heart-beat"></i></div>
+                                <h4 class="title"><a href="/Home/Articles/@item.Id">@item.Name</a></h4>
+                                <p class="description">@item.Description</p>
+                            </div>
+                        </a>
+                    </div>
+                }
 
-
-<section id="featured-services" class="featured-services " style="align-content:center">
-    <div class="container aos-init aos-animate" data-aos="fade-up">
-        <div class="row">
-            @foreach (var item in Model)
-            {
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <a href="/Home/Articles/@item.Id">
-                        <div class="icon-box " style="width: 100%" data-aos="fade-up" data-aos-delay="400">
-                            <div class="icon "><i class="icofont-heart-beat"></i></div>
-                            <h4 class="title"><a href="/Home/Articles/@item.Id">@item.Name</a></h4>
-                            <p class="description">@item.Description</p>
-                        </div>
-                    </a>
-                </div>
-            }
-
+            </div>
         </div>
-    </div>
-
-
-</section>
+    </section>
+</div>                                               r

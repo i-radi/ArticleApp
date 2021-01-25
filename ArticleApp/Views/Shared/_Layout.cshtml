@@ -54,7 +54,9 @@
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
 
-            <a href="index.html" class="logo mr-auto"><img src="/assets/img/logo.png" alt=""></a>
+            <a href="index.html" class="logo mr-auto"><img src="~/assets/img/logo.png" alt=""></a>    
+
+
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <h1 class="logo mr-auto"><a href="index.html">Maklato</a></h1> -->
 
@@ -95,10 +97,11 @@
     <!-- ======= Hero Section ======= -->
     @RenderSection("UpHeader",false)
     <partial name="_Header" />
-    <main id="main">
-        @RenderBody()
+<main id="main">
 
-    </main><!-- End #main -->
+    @RenderBody()
+
+</main><!-- End #main -->
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="container ">

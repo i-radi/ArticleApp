@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ArticleApp.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace ArticleApp.Controllers
 {
@@ -51,6 +47,10 @@ namespace ArticleApp.Controllers
         {
             return View();
         }
+        public IActionResult Privacy()
+        {
+            return View();
+        }
         [HttpPost ]
         public IActionResult SaveContact(ContactUs contact)
         {
@@ -61,11 +61,6 @@ namespace ArticleApp.Controllers
             return RedirectToAction("Index");
             }
             return View("Contact", contact);
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
